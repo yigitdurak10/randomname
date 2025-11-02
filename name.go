@@ -9,7 +9,7 @@ import (
 
 var persons []string
 
-func selectPC() {
+func selectInputandAppendPC() {
 	ui := &input.UI{}
 	query := "a name enter"
 	name, err := ui.Ask(query, &input.Options{
@@ -32,8 +32,8 @@ func selectPC() {
 func main() {
 	log.SetFlags(0)
 	sum := 1
-	for sum < 5 {
-		selectPC()
+	for sum <= 3 {
+		selectInputandAppendPC()
 		sum += 1
 	}
 
